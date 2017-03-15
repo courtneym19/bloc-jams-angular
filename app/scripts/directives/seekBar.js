@@ -69,7 +69,7 @@
                  * @desc Updates position of seek bar thumb
                  * @returns {Object}
                  */
-                 scope.thumbStyle = function(event){
+                 scope.thumbStyle = function(){
                      return {left: percentString()};
                  };
                  
