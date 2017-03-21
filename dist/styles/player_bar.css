@@ -147,7 +147,34 @@
      display: inline-block;
      width: 5.75rem;
      vertical-align: middle;
+     
  }
+
+ .mute {
+     height: 1.5rem;
+     background-color: rgba(0, 0, 0, 0);
+     color: white;
+     border-style: none;
+     cursor: pointer;
+     font-family: "Open Sans";
+     font-weight: 300;
+     font-size: 0.75em;
+     font-size: 0.75em;
+     position: absolute;
+     margin-top: .5rem;
+ }
+
+.mute:focus {
+    outline: 0;
+    background-color: rgb(210, 40, 123);
+    border-radius: 6px;
+}
+
+ .mute:hover {
+     background-color: rgb(210, 40, 123);
+     border-radius: 6px;
+ }
+
 
 @media (max-width: 640px) {
      .player-bar {

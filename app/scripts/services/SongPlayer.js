@@ -85,11 +85,7 @@
          */
          SongPlayer.currentTime = null;
          
-          /**
-         * @ desc Current volume on scale 0-100
-         * @type {Number}
-         */
-         SongPlayer.volume = null;
+         SongPlayer.volume = 80;
          
          /**
          * @function play
@@ -176,8 +172,16 @@
         SongPlayer.setVolume = function(volume) {
             if (currentBuzzObject) {
                 currentBuzzObject.setVolume(volume);
+                SongPlayer.volume = volume;
             }
         };
+         
+         
+        SongPlayer.muteVolume = function() {
+            if (currentBuzzObject) {
+                currentBuzzObject.toggleMute();
+            }
+        }
          
 
          
