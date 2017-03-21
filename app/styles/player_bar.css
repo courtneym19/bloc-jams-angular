@@ -162,6 +162,7 @@
      font-size: 0.75em;
      position: absolute;
      margin-top: .5rem;
+     right: 2rem;
  }
 
 .mute:focus {
