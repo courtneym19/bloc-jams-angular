@@ -103,8 +103,20 @@
                  if (currentBuzzObject.isPaused()) {
                      playSong(song);
                  }
-             }    
-         };
+             }
+             
+             if(currentBuzzObject) {
+                var currentSongIndex = getSongIndex(SongPlayer.currentSong);
+                currentBuzzObject.bind('ended', function() {
+                    currentSongIndex++;
+                    if (currentSongIndex < currentAlbum.songs.length) {
+                        var song = currentAlbum.songs[currentSongIndex];
+                        setSong(song);
+                        playSong(song);
+                    }
+                })
+             }
+          };
          
          /**
          * @function pause
@@ -164,7 +176,7 @@
             }
         };
         
-        /**
+        /*
         * @function setVolume
         * @desc Set volume on scale 0-100
         * @param {Number} volume
@@ -176,15 +188,17 @@
             }
         };
          
-         
+        /*
+        * @function muteVolume
+        * @desc Mutes the volume
+        */
         SongPlayer.muteVolume = function() {
             if (currentBuzzObject) {
                 currentBuzzObject.toggleMute();
             }
-        }
+        };
          
 
-         
          return SongPlayer;
      }
  
