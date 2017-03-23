@@ -155,6 +155,7 @@
      background-color: rgba(0, 0, 0, 0);
      color: white;
      border-style: none;
+     outline: 0;
      cursor: pointer;
      font-family: "Open Sans";
      font-weight: 300;
@@ -165,7 +166,7 @@
      right: 2rem;
  }
 
-.mute:focus {
+.mute-active {
     outline: 0;
     background-color: rgb(210, 40, 123);
     border-radius: 6px;

@@ -197,7 +197,10 @@
         SongPlayer.muteVolume = function() {
             if (currentBuzzObject) {
                 currentBuzzObject.toggleMute();
+                var muteButton = document.getElementsByClassName('mute');
+                muteButton[0].classList.toggle('mute-active');
             }
+            
         };
          
 
